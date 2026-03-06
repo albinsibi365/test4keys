@@ -1,6 +1,6 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
-#include "display_images/shiheart.qgf.h"
+#include "shiheart.qgf.h"
 #include QMK_KEYBOARD_H
 #include <qp.h>
 #include <spi_master.h>
@@ -8,7 +8,7 @@
 #define TFT_CS_PIN    A2   // Chip Select
 #define TFT_DC_PIN    A4   // Data/Command
 #define TFT_RST_PIN   A3   // Reset
-#define LCD_SPI_DIVISOR 2
+#define LCD_SPI_DIVISOR 4
 
 
 static painter_device_t display;
