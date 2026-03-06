@@ -1,6 +1,6 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
-#include "display_images/image.qgf.h"
+#include "display_images/shiheart.qgf.h"
 #include QMK_KEYBOARD_H
 #include <qp.h>
 #include <spi_master.h>
@@ -27,7 +27,7 @@ void keyboard_post_init_user(void) {
 
     qp_init(display, QP_ROTATION_0);
     painter_image_handle_t qp_load_image_mem(const void *buffer);
-    qp_drawimage(display, 0, 0, &image);
+    qp_drawimage(display, 0, 0, &shiheart);
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
