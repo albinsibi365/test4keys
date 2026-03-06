@@ -1,0 +1,11 @@
+#pragma once
+
+#define SPI_DRIVER SPID1
+
+#define SPI_SCK_PIN A5
+#define SPI_MOSI_PIN A7
+#define SPI_MISO_PIN A6
+
+
+#define QUANTUM_PAINTER_DISPLAY_TIMEOUT 0
+#define QUANTUM_PAINTER_SPI_DIVISOR 2
