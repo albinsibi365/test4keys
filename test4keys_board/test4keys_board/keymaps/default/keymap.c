@@ -12,10 +12,8 @@
 
 
 static painter_device_t display;
-
-
 void keyboard_post_init_user(void) {
-    display = qp_ili9341_spi_make_device(
+    display = qp_ili9341_make_spi_device(
         240,       // width
         320,       // height
         TFT_CS_PIN,    // chip select pin
