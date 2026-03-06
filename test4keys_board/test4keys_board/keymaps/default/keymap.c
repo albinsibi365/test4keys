@@ -1,6 +1,6 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
-#include "display_images/shiheart.qgf.h"
+#include "shiheart.qgf.h"
 #include QMK_KEYBOARD_H
 #include <qp.h>
 #include <spi_master.h>
