@@ -25,9 +25,10 @@ void keyboard_post_init_user(void) {
         LCD_SPI_DIVISOR,   // SPI speed divisor
         0   // SPI mode 
     );
+    
 
     qp_init(display, QP_ROTATION_0);
-    qp_clear(painter_device_t device);
+    qp_clear(painter_device_t display);
 
     shiheart = qp_load_image_mem(gfx_shiheart);
      if (shiheart != NULL) {
