@@ -14,15 +14,6 @@
 static painter_device_t display;
 //static painter_image_handle_t shiheart;
 
-static uint8_t last_backlight = 255;
-
-void suspend_wakeup_init_user(void) {
-    qp_power(display, true);
-    if (last_backlight != 255) {
-        backlight_set(last_backlight);
-    }
-    last_backlight = 255;
-}
 
 void keyboard_post_init_user(void) {
     display = qp_ili9341_make_spi_device(
