@@ -1,6 +1,6 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
-#include "shiheart.qgf.h"
+#include "shiheartcolor.qgf.h"
 #include QMK_KEYBOARD_H
 #include <qp.h>
 #include <spi_master.h>
@@ -12,7 +12,7 @@
 
 
 static painter_device_t display;
-static painter_image_handle_t shiheart;
+static painter_image_handle_t shiheartcolor;
 
 
 void keyboard_post_init_user(void) {
@@ -30,9 +30,9 @@ void keyboard_post_init_user(void) {
     qp_init(display, QP_ROTATION_0);
     qp_clear(display);
 
-    shiheart = qp_load_image_mem(gfx_shiheart);
-     if (shiheart != NULL) {
-        qp_drawimage(display, 0, 0, shiheart);
+    shiheartcolor = qp_load_image_mem(gfx_shiheartcolor);
+     if (shiheartcolor != NULL) {
+        qp_drawimage(display, 0, 0, shiheartcolor);
     }
     qp_flush(display);
 }

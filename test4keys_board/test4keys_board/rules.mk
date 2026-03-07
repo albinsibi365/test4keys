@@ -1,3 +1,3 @@
-SRC += shiheart.qgf.c
+SRC += shiheartcolor.qgf.c
 QUANTUM_PAINTER_ENABLE = yes
 QUANTUM_PAINTER_DRIVERS += ili9341_spi
