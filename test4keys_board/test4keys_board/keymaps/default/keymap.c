@@ -28,12 +28,13 @@ void keyboard_post_init_user(void) {
     
 
     qp_init(display, QP_ROTATION_0);
-    qp_clear(painter_device_t display);
+    qp_clear(display);
 
     shiheart = qp_load_image_mem(gfx_shiheart);
      if (shiheart != NULL) {
         qp_drawimage(display, 0, 0, shiheart);
     }
+    qp_flush(display);
 }
 
 
