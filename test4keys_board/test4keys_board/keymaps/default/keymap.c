@@ -1,6 +1,6 @@
 // Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
-//#include "shiheart.qgf.h"
+#include "shiheart.qgf.h"
 #include QMK_KEYBOARD_H
 #include <qp.h>
 #include <spi_master.h>
@@ -12,11 +12,11 @@
 
 
 static painter_device_t display;
-//static painter_image_handle_t shiheart;
+static painter_image_handle_t shiheart;
 
 
 void keyboard_post_init_user(void) {
-    display = qp_st7735_make_spi_device(
+    display = qp_ili9341_make_spi_device(
         240,       // width
         320,       // height
         TFT_CS_PIN,    // chip select pin
@@ -27,14 +27,12 @@ void keyboard_post_init_user(void) {
     );
 
     qp_init(display, QP_ROTATION_0);
-    qp_rect(display, 0, 0, 240, 320, 255, 0, 0, true);
-    qp_flush(display);
+    qp_clear(painter_device_t device);
 
-
-  //  shiheart = qp_load_image_mem(gfx_shiheart);
-  //   if (shiheart != NULL) {
-  //      qp_drawimage(display, 0, 0, shiheart);
-  //  }
+    shiheart = qp_load_image_mem(gfx_shiheart);
+     if (shiheart != NULL) {
+        qp_drawimage(display, 0, 0, shiheart);
+    }
 }
 
 
